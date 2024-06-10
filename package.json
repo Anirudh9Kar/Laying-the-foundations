@@ -1,0 +1,32 @@
+{
+  "name": "episode-1",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Anirudh Karanam",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anirudh9Kar/Episode-1.git"
+  },
+  "keywords": [],
+  "author": "Anirudh Karanam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anirudh9Kar/Episode-1/issues"
+  },
+  "homepage": "https://github.com/Anirudh9Kar/Episode-1#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist":[
+    "last 3 versions"
+  ]
+}
