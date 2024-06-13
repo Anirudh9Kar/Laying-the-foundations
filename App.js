@@ -1,26 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent=React.createElement("div", {id:"parent"},
-[React.createElement("div",{id:"child"},[
-    React.createElement("h1",{},"This is Namaste React Bro!😎"),
-    React.createElement("h2",{},"I am h2 tag")
-])],
+//React.createElement => Object => Upon rendering it will be a HTML Element
 
-[React.createElement("div",{id:"child2"},[
-    React.createElement("h2",{},"I am h1 tag"),
-    React.createElement("h2",{},"I am h2 tag")
-])]
-)
-
-// const parent=React.createElement("div",{id:"parent"},React.createElement("div"))
+const heading=React.createElement(
+    "h1" ,{id: "heading"}, 
+    "Namaste React"
+);
 
 
-// const heading=React.createElement(
-//     "h1",
-//     {id:"heading"},
-//     "Hello World from react"); //takes 3 args
+
+// JSX. JSX's syntax looks like HTML but it is different. 
+const jsxHeading=<h1 id="heading">Namaste JS from JSX-Element</h1>
+
+
+
+// React Functional Component
+
+const HeadingComponent= () =>{
+    return <h1>Namaste React from Fun 1</h1>;
+}
+
+const number=100;
+//Component Composition
+const HeadingComponent2=()=> (
+    <div className="Container">
+        {jsxHeading}
+    <HeadingComponent></HeadingComponent>
+    <HeadingComponent/>
+    {HeadingComponent()}
+    <h1>Namaste React from Function Component</h1> 
+    </div>
+   
+);
+
+
+// const Title= () =>(
+// <h1>React Element</h1>
+// );
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
- 
+root.render(<HeadingComponent2/>); 
+// root.render(<Title/>);
